@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enhanced HTML5 form with structured content, validation, and accessibility.">
+  <title>Enhanced Form</title>
+</head>
+<body>
+
+  <header>
+    <h1>Event Registration</h1>
+    <p>Fill in the form below to register for the Web Dev Conference 2025.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>What to Expect</h2>
+      <ul>
+        <li>Hands-on coding workshops</li>
+        <li>Talks by industry leaders</li>
+        <li>Networking opportunities</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Event Schedule</h2>
+      <table border="1" aria-label="Event Schedule Table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Opening Remarks</td>
+            <td>Jane Doe</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>HTML5 Best Practices</td>
+            <td>John Smith</td>
+          </tr>
+          <tr>
+            <td>11:30 AM</td>
+            <td>Form Accessibility</td>
+            <td>Ali Khan</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Promo Video</h2>
+      <video width="320" height="240" controls>
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on" aria-label="Registration Form">
+        
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="yourname@example.com" required autocomplete="email">
+
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99" required>
+
+        <br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="nonbinary">Non-binary</option>
+          <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Workshops Interested In:</label><br>
+        <input type="checkbox" id="html" name="workshop" value="HTML">
+        <label for="html">HTML5</label><br>
+        <input type="checkbox" id="css" name="workshop" value="CSS">
+        <label for="css">CSS3</label><br>
+        <input type="checkbox" id="js" name="workshop" value="JavaScript">
+        <label for="js">JavaScript</label><br>
+
+        <br>
+
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+
+        <br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" value="Kenya" readonly>
+
+        <br><br>
+
+        <label for="bio">Short Bio:</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself..."></textarea>
+
+        <br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+        <br><br>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Web Dev Conference. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
